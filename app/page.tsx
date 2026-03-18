@@ -6,110 +6,135 @@ export default function RishardPortfolio() {
       stack: ["Python", "Flask", "OpenAI API", "PyPDF2", "Pytesseract", "HTML", "CSS", "JavaScript"],
       bullets: [
         "Built a Flask-based web app that uploads tax documents, extracts text, and estimates refund or amount owed.",
-        "Implemented document processing for PDF, image, and text inputs with a fallback path when AI extraction is unavailable.",
-        "Created API routes for upload, extraction, and calculation workflows with a clean browser-based interface.",
+        "Implemented document processing for PDF, image, and text inputs with fallback handling.",
+        "Created API routes for upload, extraction, and calculation workflows with a clean interface.",
       ],
       accent: "from-emerald-500 to-teal-500",
       icon: "💰",
     },
     {
       title: "Resume Parser & Job Matcher",
-      tagline: "Resume extraction and compatibility scoring against job descriptions",
+      tagline: "Resume extraction and compatibility scoring",
       stack: ["Python", "Flask", "Regex", "PyPDF2", "python-docx", "HTML", "CSS", "JavaScript"],
       bullets: [
-        "Developed a resume parsing workflow that extracts contact details, summary, education, experience, and skills from PDF, DOCX, and TXT files.",
-        "Built a job-matching engine that compares extracted resume skills against job descriptions and returns compatibility scoring, matching skills, and missing skills.",
-        "Designed an interactive UI for drag-and-drop upload, parsed output review, and job matching analysis in one place.",
+        "Extracts resume data from PDF, DOCX, and TXT formats.",
+        "Matches skills against job descriptions with scoring system.",
+        "Built UI for upload, review, and matching results.",
       ],
       accent: "from-orange-500 to-red-500",
       icon: "📄",
     },
     {
       title: "Hercules AI Coaching Engine",
-      tagline: "Rule-based training recommendations for next-set progression",
-      stack: ["Python", "Dataclasses", "Training Logic", "Modular Package Design"],
+      tagline: "Workout progression recommendation system",
+      stack: ["Python", "Training Logic", "Modular Design"],
       bullets: [
-        "Built a coaching engine that recommends whether to increase weight, decrease weight, or stay at the current load based on reps, RIR, and exercise targets.",
-        "Structured the system with reusable templates and progression rules for compound and machine-based movements.",
-        "Generated dynamic coaching messages with rep goals and training cues to simulate an intelligent workout assistant.",
+        "Recommends weight adjustments based on reps and RIR.",
+        "Implements reusable training templates.",
+        "Simulates coaching feedback for users.",
       ],
       accent: "from-violet-500 to-fuchsia-500",
       icon: "🏋️",
     },
   ];
 
-  const skills = [
-    "Python",
-    "Flask",
-    "JavaScript",
-    "HTML/CSS",
-    "REST APIs",
-    "OpenAI API",
-    "Document Parsing",
-    "Regex",
-    "PyPDF2",
-    "OCR",
-    "Git/GitHub",
-    "SQLite",
-  ];
-
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100">
-      <main className="mx-auto max-w-6xl px-6 py-12">
-        <h1 className="text-4xl font-bold mb-6">Rishard Dukes Portfolio</h1>
+    <div className="min-h-screen bg-slate-950 text-slate-100 px-6 py-10">
+      <div className="max-w-6xl mx-auto space-y-16">
 
-        <div className="mb-8">
-          <a
-            href="https://github.com/RishardDukes/portfolio"
-            target="_blank"
-            className="mr-4 text-emerald-400 underline"
-          >
-            GitHub
-          </a>
-          <a
-            href="https://www.linkedin.com/in/rishard-dukes/"
-            target="_blank"
-            className="text-blue-400 underline"
-          >
-            LinkedIn
-          </a>
-        </div>
+        {/* HERO */}
+        <section className="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">
+              Rishard Dukes
+            </h1>
+            <p className="text-slate-300 text-lg">
+              Computational Science graduate focused on AI, automation, and building real-world tools.
+            </p>
+          </div>
+          <img
+            src="/IMG_6277.jpeg"
+            className="rounded-3xl w-full h-[400px] object-cover"
+          />
+        </section>
 
-        <h2 className="text-2xl font-semibold mb-4">Projects</h2>
+        {/* ABOUT */}
+        <section>
+          <h2 className="text-3xl font-bold mb-4">About Me</h2>
+          <p className="text-slate-300 leading-7">
+            Hey! My name is Rishard Dukes and I am a Florida State University Alumni with a Bachelor of Science focused in Computational Science.
+            I have worked in data analysis, IT, and live scripting for real-world applications.
+            My work includes optimizing warehouse automation scripts, building AI-powered workout tools, and creating resume parsing systems.
+            I currently work at Phase V Fulfillment in Fort Myers, Florida.
+          </p>
+        </section>
 
-        <div className="grid gap-6">
-          {projects.map((project) => (
-            <div key={project.title} className="p-6 border border-white/10 rounded-xl bg-white/5">
-              <h3 className="text-xl font-bold mb-2">{project.icon} {project.title}</h3>
-              <p className="mb-3 text-gray-300">{project.tagline}</p>
-
-              <div className="mb-3">
-                {project.stack.map((tech) => (
-                  <span key={tech} className="inline-block mr-2 mb-2 px-2 py-1 bg-gray-800 rounded text-sm">
-                    {tech}
-                  </span>
-                ))}
+        {/* PROJECTS */}
+        <section>
+          <h2 className="text-3xl font-bold mb-6">Projects</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {projects.map((p) => (
+              <div key={p.title} className="bg-white/5 p-6 rounded-2xl">
+                <h3 className="text-xl font-semibold mb-2">{p.title}</h3>
+                <p className="text-sm text-slate-400 mb-3">{p.tagline}</p>
+                <ul className="text-sm text-slate-300 space-y-2">
+                  {p.bullets.map((b) => (
+                    <li key={b}>• {b}</li>
+                  ))}
+                </ul>
               </div>
+            ))}
+          </div>
+        </section>
 
-              <ul className="list-disc ml-5 text-gray-300">
-                {project.bullets.map((b) => (
-                  <li key={b}>{b}</li>
-                ))}
-              </ul>
+        {/* HOBBIES */}
+        <section>
+          <h2 className="text-3xl font-bold mb-6">Hobbies</h2>
+
+          <div className="grid md:grid-cols-3 gap-6">
+
+            {/* Gym */}
+            <div className="bg-white/5 p-4 rounded-2xl">
+              <img src="/IMG_6195.jpeg" className="rounded-xl mb-4 h-[200px] w-full object-cover"/>
+              <h3 className="text-xl font-semibold">Gym</h3>
+              <p className="text-sm text-slate-300">
+                Training 5-6 days a week. Fitness inspired my first major project and continues to be a core part of my lifestyle.
+              </p>
             </div>
-          ))}
-        </div>
 
-        <h2 className="text-2xl font-semibold mt-10 mb-4">Skills</h2>
+            {/* EDM */}
+            <div className="bg-white/5 p-4 rounded-2xl">
+              <img src="/IMG_5779.jpeg" className="rounded-xl mb-4 h-[200px] w-full object-cover"/>
+              <h3 className="text-xl font-semibold">EDM</h3>
+              <p className="text-sm text-slate-300">
+                I attend festivals like Breakaway and Factory Town. Grew up on Daft Punk and now love artists like ANOTR.
+              </p>
+            </div>
 
-        <div>
-          {skills.map((skill) => (
-            <span key={skill} className="inline-block mr-2 mb-2 px-3 py-1 bg-gray-800 rounded">
-              {skill}
-            </span>
-          ))}
-        </div>
-      </main>
+            {/* Gaming */}
+            <div className="bg-white/5 p-4 rounded-2xl">
+              <h3 className="text-xl font-semibold mb-2">Video Games</h3>
+              <p className="text-sm text-slate-300">
+                Gaming sparked my interest in technology early and helped shape my path into software and IT.
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+        {/* TRAVEL */}
+        <section>
+          <h2 className="text-3xl font-bold mb-6">Travel</h2>
+          <img
+            src="/D21B3D6E-4E77-462B-8958-2AFF1749C9E8.jpeg"
+            className="rounded-3xl w-full h-[400px] object-cover"
+          />
+        </section>
+
+      </div>
+    </div>
+  );
+}
     </div>
   );
 }
