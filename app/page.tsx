@@ -36,12 +36,13 @@ export default function RishardPortfolio() {
     },
     {
       title: "Workout Tracker + Hercules",
-      tagline: "Full workout tracker with embedded Hercules coaching assistant",
-      stack: ["Python", "Training Logic", "Modular Design", "Progress Tracking"],
+      tagline: "Workout tracker with embedded AI for coaching, nutrition, and programming",
+      stack: ["Python", "Training Logic", "Modular Design", "Progress Tracking", "Nutrition Guidance", "Program Builder"],
       bullets: [
         "Tracks sessions, exercises, sets, reps, and week-to-week progression.",
         "Embeds Hercules directly in the tracker to recommend weight changes using reps and RIR.",
-        "Supports reusable training templates and coaching-style workout feedback.",
+        "Adds nutrition guidance to support training goals with practical food and intake suggestions.",
+        "Lets users build and load full training programs directly into the tracker.",
       ],
       link: "https://github.com/RishardDukes/portfolio",
     },
@@ -143,7 +144,7 @@ export default function RishardPortfolio() {
             </p>
             <p>
               Some of my most notable work includes fine-tuning an existing workflow automation script using JavaScript to display warehouse workflow
-              in picking and packing areas, building Workout Tracker + Hercules where AI coaching is built directly into workout logging, and creating a resume parser
+              in picking and packing areas, building Workout Tracker + Hercules where AI coaching, nutrition guidance, and program creation are built directly into workout logging, and creating a resume parser
               that grades resumes based on their fit for a given field.
             </p>
             <p>
