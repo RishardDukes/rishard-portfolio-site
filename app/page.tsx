@@ -86,13 +86,13 @@ export default function Home() {
       <section className="hero container" id="top">
         <div className="hero-copy">
           <p className="kicker"><span className="status-dot" /> IT Operations · Asset Management · Automation</p>
-          <h1>I keep technology moving—and build better systems when the old ones slow people down.</h1>
-          <p className="hero-subtext">I’m Rishard Dukes, an IT Operations and Asset Management professional with a Computational Science background. I support real production environments, manage device lifecycles at scale, solve urgent technical problems, and turn repetitive work into practical tools.</p>
+          <h1>I adapt to new technology and build better systems when old ones slow people down.</h1>
+          <p className="hero-subtext">I’m Rishard Dukes, an IT Operations and Asset Management professional with a Computational Science background. I support real production environments, manage device lifecycles at scale, solve technical problems, and turn repetitive work into practical tools.</p>
           <div className="hero-actions">
             <a className="button primary" href="#experience">View my work</a>
             <a className="button secondary" href="https://github.com/RishardDukes" target="_blank" rel="noreferrer">GitHub ↗</a>
           </div>
-          <div className="hero-meta"><span>Based in Southwest Florida</span><span>Open to remote IT opportunities</span></div>
+          <div className="hero-meta"><span>Based in Southwest Florida</span><span>Open to remote/hybrid IT opportunities</span></div>
         </div>
         <div className="hero-portrait-wrap">
           <div className="hero-portrait">
@@ -105,13 +105,13 @@ export default function Home() {
       <section className="stats-wrap"><div className="stats container">{stats.map((stat) => <div className="stat" key={stat.label}><strong>{stat.value}</strong><span>{stat.label}</span></div>)}</div></section>
 
       <section className="section container" id="experience">
-        <div className="section-heading"><p className="eyebrow">What I do</p><h2>Technical ownership beyond a ticket queue.</h2><p>I work where support, infrastructure, inventory, production, and process improvement meet.</p></div>
+        <div className="section-heading"><p className="eyebrow">What I do</p><h2>Technical ownership beyond ticket queues.</h2><p>I work where support, infrastructure, inventory, production, and process improvement meet.</p></div>
         <div className="capability-grid">{capabilities.map((item) => <article className="capability-card" key={item.title}><h3>{item.title}</h3><p>{item.text}</p><div className="tags">{item.tags.map((tag) => <span key={tag}>{tag}</span>)}</div></article>)}</div>
       </section>
 
       <section className="section experience-section">
         <div className="container">
-          <div className="section-heading narrow"><p className="eyebrow">Experience</p><h2>Hands-on work with measurable operational impact.</h2></div>
+          <div className="section-heading narrow"><p className="eyebrow">Experience</p><h2>Hands-on work with tangibleimpact.</h2></div>
           <div className="ops-feature">
             <div className="ops-image"><Image src="/images/mac-wipe.webp" alt="A MacBook being wiped and prepared with macOS" fill sizes="(max-width: 900px) 100vw, 44vw" /></div>
             <div className="ops-copy"><p className="eyebrow">A real part of the work</p><h3>Every device has a lifecycle.</h3><p>Assessment, secure wiping, operating-system recovery, configuration, quality checks, staging, and documentation all have to happen before a device is ready for its next user or client workflow.</p><div className="tags"><span>Secure Wiping</span><span>macOS Recovery</span><span>Device Readiness</span><span>Quality Control</span></div></div>
@@ -138,7 +138,7 @@ export default function Home() {
 
       <section className="section life-section" id="life">
         <div className="container">
-          <div className="life-heading"><div><p className="eyebrow">Beyond the keyboard</p><h2>The work matters, but it isn’t the whole story.</h2></div><p>Training, traveling, live music, and doing things that make life feel bigger than a screen.</p></div>
+          <div className="life-heading"><div><p className="eyebrow">Beyond the keyboard</p><h2>Exploration, discipline and freedom define my pastimes.</h2></div><p>Training, traveling, live music, and doing things that make life feel bigger than the 9-5.</p></div>
           <div className="photo-grid">{photos.map((photo) => <figure className={`photo-card ${photo.className}`} key={photo.src}><Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw" /><figcaption>{photo.label}</figcaption></figure>)}</div>
         </div>
       </section>
