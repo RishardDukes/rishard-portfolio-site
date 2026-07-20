@@ -5,7 +5,7 @@ const stats = [
   { value: "750+", label: "devices configured, wiped, repaired, or processed" },
   { value: "30+", label: "client environments supported through daily operations" },
   { value: "2", label: "internal Electron tools built to remove repetitive work" },
-  { value: "1", label: "onsite IT owner supporting the operation end to end" },
+  { value: "1", label: "on-site IT owner supporting operations end to end" },
 ];
 
 const capabilities = [
@@ -111,7 +111,7 @@ export default function Home() {
 
       <section className="section experience-section">
         <div className="container">
-          <div className="section-heading narrow"><p className="eyebrow">Experience</p><h2>Hands-on work with tangibleimpact.</h2></div>
+          <div className="section-heading narrow"><p className="eyebrow">Experience</p><h2>Hands-on work with tangible impact.</h2></div>
           <div className="ops-feature">
             <div className="ops-image"><Image src="/images/mac-wipe.webp" alt="A MacBook being wiped and prepared with macOS" fill sizes="(max-width: 900px) 100vw, 44vw" /></div>
             <div className="ops-copy"><p className="eyebrow">A real part of the work</p><h3>Every device has a lifecycle.</h3><p>Assessment, secure wiping, operating-system recovery, configuration, quality checks, staging, and documentation all have to happen before a device is ready for its next user or client workflow.</p><div className="tags"><span>Secure Wiping</span><span>macOS Recovery</span><span>Device Readiness</span><span>Quality Control</span></div></div>
@@ -121,7 +121,7 @@ export default function Home() {
       </section>
 
       <section className="section container" id="projects">
-        <div className="section-heading"><p className="eyebrow">Selected projects</p><h2>Software that supports how I operate.</h2><p>My coding background is not separate from my IT work. It helps me diagnose systems, understand workflows, and build solutions other support professionals may only document.</p></div>
+        <div className="section-heading"><p className="eyebrow">Selected projects</p><h2>Software that supports how I operate.</h2><p>My coding background is not separate from my IT work. It helps me diagnose systems, understand workflows, and build solutions that other support professionals may only document.</p></div>
         <div className="project-grid">{projects.map((project, index) => <article className="project-card" key={project.title}><div className="project-number">0{index + 1}</div><p className="project-type">{project.type}</p><h3>{project.title}</h3><p>{project.description}</p><div className="tags">{project.tech.map((tech) => <span key={tech}>{tech}</span>)}</div></article>)}</div>
       </section>
 
@@ -130,7 +130,7 @@ export default function Home() {
       <section className="section container personal-section" id="about">
         <div className="section-heading"><p className="eyebrow">About me</p><h2>Curious by nature, practical by experience.</h2></div>
         <div className="personal-grid">
-          <article className="personal-card personal-card-wide"><h3>My background</h3><div><p>I graduated from Florida State University with a bachelor’s degree in Computational Science and a 3.1 GPA. Since then, my professional experience has expanded across IT Operations and Asset Management, AI Quality Assurance and Prompt Engineering, and personal software projects.</p><p>I enjoy learning new systems, taking on unfamiliar technology, and contributing to projects and products that people can actually use.</p></div></article>
+          <article className="personal-card personal-card-wide"><h3>My background</h3><div><p>I graduated from Florida State University with a bachelor’s degree in Computational Science and a 3.1 GPA. Since then, my professional experience has expanded across IT operations and asset management, AI quality assurance, prompt engineering, and personal software projects.</p><p>I enjoy learning new systems, taking on unfamiliar technology, and contributing to projects and products that people can actually use.</p></div></article>
           <article className="personal-card"><h3>Outside of work</h3><p>I’m a serious gym person and currently train six days a week with a routine that changes monthly. I focus more on strength and endurance than aesthetics.</p><p>I also love EDM and going to raves. KETTAMA, ANOTR, and Underworld are a few of my favorite artists. Traveling is another major interest of mine, and I’ve visited four countries so far.</p></article>
           <article className="personal-card"><h3>What I’m working toward</h3><p>My long-term goal is to build a career at the intersection of AI, data, and engineering. I’m continuing to strengthen my experience in IT operations, automation, databases, and software so I can move into the part of the technology industry that interests me most.</p></article>
         </div>
@@ -138,14 +138,14 @@ export default function Home() {
 
       <section className="section life-section" id="life">
         <div className="container">
-          <div className="life-heading"><div><p className="eyebrow">Beyond the keyboard</p><h2>Exploration, discipline and freedom define my pastimes.</h2></div><p>Training, traveling, live music, and doing things that make life feel bigger than the 9-5.</p></div>
+          <div className="life-heading"><div><p className="eyebrow">Beyond the keyboard</p><h2>Exploration, discipline, and freedom define my pastimes.</h2></div><p>Training, traveling, live music, and doing things that make life feel bigger than the 9-to-5.</p></div>
           <div className="photo-grid">{photos.map((photo) => <figure className={`photo-card ${photo.className}`} key={photo.src}><Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 33vw" /><figcaption>{photo.label}</figcaption></figure>)}</div>
         </div>
       </section>
 
       <section className="section journey-section"><div className="container"><div className="section-heading narrow"><p className="eyebrow">Career journey</p><h2>A path shaped by curiosity and adaptation.</h2></div><div className="journey-track"><div className="journey-item"><span>2020–2021</span><h3>Biomedical Engineering</h3><p>Florida State University</p></div><div className="journey-item"><span>2021–2022</span><h3>Computational Biology</h3><p>Florida State University</p></div><div className="journey-item"><span>2022–2024</span><h3>Computational Science</h3><p>B.S. earned in December 2024</p></div><div className="journey-item"><span>2025–2026</span><h3>Warehouse Associate</h3><p>Phase V Fulfillment</p></div><div className="journey-item active"><span>2026–Present</span><h3>IT Operations & Asset Management</h3><p>Phase V Fulfillment</p></div></div></div></section>
 
-      <section className="contact container"><p className="eyebrow">Let’s work together</p><h2>Looking for someone who can support the operation and improve it?</h2><p>I’m interested in remote IT Support, Technical Support, Junior Systems Administration, IT Operations, and Asset Management opportunities.</p><div className="hero-actions centered"><a className="button primary" href="https://www.linkedin.com/in/rishard-dukes" target="_blank" rel="noreferrer">Message me on LinkedIn ↗</a><a className="button secondary" href="https://github.com/RishardDukes" target="_blank" rel="noreferrer">Explore GitHub</a></div></section>
+      <section className="contact container"><p className="eyebrow">Let’s work together</p><h2>Looking for someone who can support the operation and improve it?</h2><p>I’m interested in remote IT support, technical support, junior systems administration, IT operations, and asset management opportunities.</p><div className="hero-actions centered"><a className="button primary" href="https://www.linkedin.com/in/rishard-dukes" target="_blank" rel="noreferrer">Message me on LinkedIn ↗</a><a className="button secondary" href="https://github.com/RishardDukes" target="_blank" rel="noreferrer">Explore GitHub</a></div></section>
 
       <footer><div className="container footer-inner"><span>© 2026 Rishard Dukes</span><span>IT Operations · Asset Management · Automation</span></div></footer>
     </main>
