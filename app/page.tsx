@@ -43,6 +43,29 @@ const work = [
   },
 ];
 
+const previousAIExperience = [
+  {
+    title: "AI Data Specialist",
+    company: "RWS Workforce",
+    period: "September 2025 — March 2026",
+    bullets: [
+      "Evaluated AI-generated outputs for quality, accuracy, consistency, and adherence to detailed task guidelines.",
+      "Reviewed and annotated structured data used to improve model behavior and response quality.",
+      "Identified weak outputs, inconsistencies, and edge cases while maintaining reliable quality standards.",
+    ],
+  },
+  {
+    title: "AI Prompt Engineer",
+    company: "Outlier AI",
+    period: "November 2025 — March 2026",
+    bullets: [
+      "Designed, tested, and refined prompts for large language models across structured tasks.",
+      "Evaluated model reasoning, instruction-following, factual accuracy, and response quality.",
+      "Used iterative feedback and edge-case testing to improve prompts and AI-generated outputs.",
+    ],
+  },
+];
+
 const projects = [
   { title: "Warehouse Workflow App", type: "Operations Automation", description: "An Electron desktop application designed around real warehouse use, consolidating client workflows and reducing repeated navigation and login friction.", tech: ["Electron", "JavaScript", "HTML/CSS", "Workflow Automation"] },
   { title: "Billable Timesheet Tool", type: "Internal Productivity", description: "A lightweight desktop utility for recording work performed and producing consistent email-ready summaries for billing and operational reporting.", tech: ["Electron", "JavaScript", "Process Design", "Email Workflows"] },
@@ -118,6 +141,13 @@ export default function Home() {
             <div className="ops-copy"><p className="eyebrow">A real part of the work</p><h3>Every device has a lifecycle.</h3><p>Assessment, secure wiping, operating-system recovery, configuration, quality checks, staging, and documentation all have to happen before a device is ready for its next user or client workflow.</p><div className="tags"><span>Secure Wiping</span><span>macOS Recovery</span><span>Device Readiness</span><span>Quality Control</span></div></div>
           </div>
           <div className="timeline">{work.map((role) => <article className="role" key={role.title}><div className="role-side"><p>{role.eyebrow}</p><span>{role.period}</span></div><div className="role-body"><h3>{role.title}</h3><h4>{role.company}</h4><ul>{role.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul></div></article>)}</div>
+          <div className="ai-history">
+            <div className="ai-history-heading">
+              <p className="eyebrow">Previous AI Experience</p>
+              <h3>AI quality and prompt work that strengthened my systems mindset.</h3>
+            </div>
+            <div className="ai-role-grid">{previousAIExperience.map((role) => <article className="ai-role" key={role.title}><p className="ai-role-period">{role.period}</p><h4>{role.title}</h4><p className="ai-role-company">{role.company}</p><ul>{role.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul></article>)}</div>
+          </div>
         </div>
       </section>
 
@@ -131,7 +161,7 @@ export default function Home() {
       <section className="section container personal-section" id="about">
         <div className="section-heading"><p className="eyebrow">About me</p><h2>Curious by nature, practical by experience.</h2></div>
         <div className="personal-grid">
-          <article className="personal-card personal-card-wide"><h3>My background</h3><div><p>I graduated from Florida State University with a bachelor’s degree in Computational Science and a 3.1 GPA. Since then, my professional experience has expanded across IT operations and asset management, AI quality assurance, prompt engineering, and personal software projects.</p><p>I enjoy learning new systems, taking on unfamiliar technology, and contributing to projects and products that people can actually use.</p></div></article>
+          <article className="personal-card personal-card-wide"><h3>My background</h3><div><p>I graduated from Florida State University with a bachelor’s degree in Computational Science and a 3.1 GPA. Since then, my professional experience has expanded across IT operations and asset management, AI quality assurance, prompt engineering, and automation-focused software projects.</p><p>I enjoy learning new systems, taking on unfamiliar technology, and contributing to projects and products that people can actually use.</p></div></article>
           <article className="personal-card"><h3>Outside of work</h3><p>I’m a serious gym person and currently train six days a week with a routine that changes monthly. I focus more on strength and endurance than aesthetics.</p><p>I also love EDM and going to raves. KETTAMA, ANOTR, and Underworld are a few of my favorite artists. Traveling is another major interest of mine, and I’ve visited four countries so far.</p></article>
           <article className="personal-card"><h3>What I’m working toward</h3><p>My long-term goal is to build a career at the intersection of AI, data, and engineering. I’m continuing to strengthen my experience in IT operations, automation, databases, and software so I can move into the part of the technology industry that interests me most.</p></article>
         </div>
@@ -144,7 +174,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section journey-section"><div className="container"><div className="section-heading narrow"><p className="eyebrow">Career journey</p><h2>A path shaped by curiosity and adaptation.</h2></div><div className="journey-track"><div className="journey-item"><span>2020–2021</span><h3>Biomedical Engineering</h3><p>Florida State University</p></div><div className="journey-item"><span>2021–2022</span><h3>Computational Biology</h3><p>Florida State University</p></div><div className="journey-item"><span>2022–2024</span><h3>Computational Science</h3><p>B.S. earned in December 2024</p></div><div className="journey-item"><span>2025–2026</span><h3>Warehouse Associate</h3><p>Phase V Fulfillment</p></div><div className="journey-item active"><span>2026–Present</span><h3>IT Operations & Asset Management</h3><p>Phase V Fulfillment</p></div></div></div></section>
+      <section className="section journey-section"><div className="container"><div className="section-heading narrow"><p className="eyebrow">Career journey</p><h2>A path shaped by curiosity and adaptation.</h2></div><div className="journey-track"><div className="journey-item"><span>2020–2021</span><h3>Biomedical Engineering</h3><p>Florida State University</p></div><div className="journey-item"><span>2021–2022</span><h3>Computational Biology</h3><p>Florida State University</p></div><div className="journey-item"><span>2022–2024</span><h3>Computational Science</h3><p>B.S. earned in December 2024</p></div><div className="journey-item"><span>2025–2026</span><h3>Warehouse Associate</h3><p>Phase V Fulfillment</p></div><div className="journey-item"><span>2025–2026</span><h3>AI Data Specialist</h3><p>RWS Workforce</p></div><div className="journey-item"><span>2025–2026</span><h3>AI Prompt Engineer</h3><p>Outlier AI</p></div><div className="journey-item active"><span>2026–Present</span><h3>IT Operations & Asset Management</h3><p>Phase V Fulfillment</p></div></div></div></section>
 
       <section className="contact container"><p className="eyebrow">Let’s work together</p><h2>Looking for someone who can support the operation and improve it?</h2><p>I’m interested in remote IT support, technical support, junior systems administration, IT operations, and asset management opportunities.</p><div className="hero-actions centered"><a className="button primary" href="https://www.linkedin.com/in/rishard-dukes" target="_blank" rel="noreferrer">Message me on LinkedIn ↗</a><a className="button secondary" href="https://github.com/RishardDukes" target="_blank" rel="noreferrer">Explore GitHub</a></div></section>
 
