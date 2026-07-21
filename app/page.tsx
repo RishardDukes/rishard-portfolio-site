@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ExperienceMedia from "./ExperienceMedia";
 import ThemeToggle from "./ThemeToggle";
 
 const stats = [
@@ -113,7 +114,7 @@ export default function Home() {
         <div className="container">
           <div className="section-heading narrow"><p className="eyebrow">Experience</p><h2>Hands-on work with tangible impact.</h2></div>
           <div className="ops-feature">
-            <div className="ops-image"><Image src="/images/mac-wipe.webp" alt="A MacBook being wiped and prepared with macOS" fill sizes="(max-width: 900px) 100vw, 44vw" /></div>
+            <ExperienceMedia />
             <div className="ops-copy"><p className="eyebrow">A real part of the work</p><h3>Every device has a lifecycle.</h3><p>Assessment, secure wiping, operating-system recovery, configuration, quality checks, staging, and documentation all have to happen before a device is ready for its next user or client workflow.</p><div className="tags"><span>Secure Wiping</span><span>macOS Recovery</span><span>Device Readiness</span><span>Quality Control</span></div></div>
           </div>
           <div className="timeline">{work.map((role) => <article className="role" key={role.title}><div className="role-side"><p>{role.eyebrow}</p><span>{role.period}</span></div><div className="role-body"><h3>{role.title}</h3><h4>{role.company}</h4><ul>{role.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul></div></article>)}</div>
