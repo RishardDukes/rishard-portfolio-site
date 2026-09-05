@@ -4,7 +4,7 @@ import LifePhotoGallery from "./LifePhotoGallery";
 import ThemeToggle from "./ThemeToggle";
 
 const stats = [
-  { value: "850+", label: "devices configured, wiped, repaired, or processed" },
+  { value: "1,000+", label: "devices configured, wiped, repaired, or processed" },
   { value: "30+", label: "client environments supported through daily operations" },
   { value: "2", label: "internal Electron tools built to remove repetitive work" },
   { value: "1", label: "on-site IT owner supporting operations end to end" },
@@ -26,7 +26,7 @@ const work = [
     bullets: [
       "Serve as the primary onsite IT resource supporting warehouse operations, client device processing, endpoint setup, printer issues, networking, access, & production-critical troubleshooting.",
       "Promoted to IT Operations & Asset Management Lead after excelling as Warehouse Associate.",
-      "Configured, wiped, repaired, staged, or processed more than 850 Windows PCs, Macs, & iPads across 30+ client workflows.",
+      "Configured, wiped, repaired, staged, or processed more than 1,000 Windows PCs, Macs, & iPads across 30+ client workflows.",
       "Handle Entra ID joins, local administrator access, FileVault, JAMF-related workflows, operating-system recovery, BIOS/UEFI changes, endpoint agents, & secure device resets.",
       "Support Zebra & Brother label printers, shipping stations, scanners, conference-room equipment, & other hardware used in daily fulfillment operations.",
       "Reorganized IT inventory & device staging areas to improve visibility, retrieval, & throughput across active client work.",
@@ -82,6 +82,14 @@ const skillGroups = [
   ["Development", "Python", "JavaScript", "Electron", "HTML/CSS", "SQL", "Git/GitHub"],
 ];
 
+const credentials = [
+  "Technical Support Fundamentals",
+  "The Bits and Bytes of Computer Networking",
+  "Operating Systems and You: Becoming a Power User",
+  "System Administration and IT Infrastructure Services",
+  "IT Security: Defense against the Digital Dark Arts",
+];
+
 const photos = [
   { src: "/images/surfing.webp", alt: "Carrying a surfboard into the ocean at sunset", label: "Surfboarding in Panama", className: "photo-wide" },
   { src: "/images/gym.webp", alt: "Training in the gym", label: "Strength & endurance", className: "photo-tall" },
@@ -101,6 +109,7 @@ export default function Home() {
           <div className="nav-links">
             <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
+            <a href="#credentials">Credentials</a>
             <a href="#about">About</a>
             <a href="#life">Life</a>
             <a className="nav-cta" href="https://www.linkedin.com/in/rishard-dukes" target="_blank" rel="noreferrer">Connect</a>
@@ -112,11 +121,12 @@ export default function Home() {
       <section className="hero container" id="top">
         <div className="hero-copy">
           <p className="kicker"><span className="status-dot" /> IT Operations · Asset Management · Automation</p>
-          <h1>I simplify the chaos of operations & build systems that actually work.</h1>
+          <h1>I keep devices, systems, and operations moving.</h1>
           <p className="hero-subtext">I'm Rishard Dukes, an IT Operations & Asset Management professional with a Computational Science background. I support real production environments, manage device lifecycles at scale, solve technical problems, & turn repetitive work into practical tools.</p>
           <div className="hero-actions">
             <a className="button primary" href="#experience">View my work</a>
             <a className="button secondary" href="https://github.com/RishardDukes" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a className="button secondary" href="/images/Rishard_Dukes_Resume.pdf" target="_blank" rel="noreferrer">Resume ↗</a>
           </div>
           <div className="hero-meta"><span>Based in Southwest Florida</span><span>Open to remote/hybrid IT opportunities</span></div>
         </div>
@@ -149,6 +159,19 @@ export default function Home() {
               <h3>Earlier roles in AI quality review & prompt testing.</h3>
             </div>
             <div className="ai-role-grid">{previousAIExperience.map((role) => <article className="ai-role" key={role.title}><p className="ai-role-period">{role.period}</p><h4>{role.title}</h4><p className="ai-role-company">{role.company}</p><ul>{role.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul></article>)}</div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section credentials-section" id="credentials">
+        <div className="container credentials-layout">
+          <div className="section-heading narrow">
+            <p className="eyebrow">Professional certificate</p>
+            <h2>Google IT Support Professional Certificate.</h2>
+            <p>Completed September 2026 through Google&apos;s IT support curriculum.</p>
+          </div>
+          <div className="credential-list">
+            {credentials.map((credential, index) => <article className="credential-item" key={credential}><span>0{index + 1}</span><h3>{credential}</h3></article>)}
           </div>
         </div>
       </section>
