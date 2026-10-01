@@ -1,5 +1,7 @@
 import Image from "next/image";
+import CredentialsShowcase from "./CredentialsShowcase";
 import ExperienceMedia from "./ExperienceMedia";
+import FeaturedProjects from "./FeaturedProjects";
 import LifePhotoGallery from "./LifePhotoGallery";
 import ThemeToggle from "./ThemeToggle";
 
@@ -70,8 +72,6 @@ const previousAIExperience = [
 ];
 
 const projects = [
-  { title: "Hercules IT", type: "Desktop IT Platform", description: "An independent Electron desktop application for IT diagnostics and support workflows, with dedicated views for devices, networks, printers, system status, and guided remediation actions.", tech: ["Electron", "React", "TypeScript", "SQLite", "Tailwind"] },
-  { title: "Phase V IT Monitor", type: "Infrastructure Monitoring", description: "A Python monitoring system that watches internet connectivity and important operational devices, tracks latency and state history, and sends useful outage and recovery alerts without notification spam.", tech: ["Python", "Networking", "Google Chat", "Google Sheets", "Automation"] },
   { title: "Warehouse Workflow App", type: "Operations Automation", description: "An Electron desktop application designed around real warehouse use, consolidating client workflows & reducing repeated navigation & login friction.", tech: ["Electron", "JavaScript", "HTML/CSS", "Workflow Automation"] },
   { title: "Billable Timesheet Tool", type: "Internal Productivity", description: "A lightweight desktop utility for recording work performed & producing consistent email-ready summaries for billing & operational reporting.", tech: ["Electron", "JavaScript", "Process Design", "Email Workflows"] },
   { title: "Workout Tracker + Hercules AI", type: "AI-Assisted Product", description: "A workout tracking application with authentication, persistent training history, progression coaching, and AI-assisted guidance built around structured fitness data.", tech: ["Python", "Flask", "SQLite", "Gemini", "Product Design"] },
@@ -83,16 +83,6 @@ const skillGroups = [
   ["Administration", "Microsoft Entra ID", "JAMF", "FileVault", "Local Admin", "BIOS/UEFI", "OS Recovery"],
   ["Operations", "Asset Lifecycle", "Inventory Control", "Secure Wiping", "Device Deployment", "Documentation", "Quality Control"],
   ["Development & Automation", "Python", "JavaScript", "TypeScript", "React", "Electron", "SQLite", "Git/GitHub"],
-];
-
-const credentials = [
-  "Google IT Support Professional Certificate",
-  "Technical Support Fundamentals",
-  "The Bits and Bytes of Computer Networking",
-  "Operating Systems and You: Becoming a Power User",
-  "System Administration and IT Infrastructure Services",
-  "IT Security: Defense against the Digital Dark Arts",
-  "Build with Gemini — Google AI",
 ];
 
 const photos = [
@@ -126,7 +116,7 @@ export default function Home() {
       <section className="hero container" id="top">
         <div className="hero-copy">
           <p className="kicker"><span className="status-dot" /> IT Operations · Automation · Technical Support</p>
-          <h1>I support the systems people depend on — and automate the work that slows them down.</h1>
+          <h1>IT operations with an automation mindset.</h1>
           <p className="hero-subtext">I'm Rishard Dukes, an IT Operations & Asset Management professional with a Computational Science background. I own onsite support, manage device lifecycles at scale, troubleshoot production-critical technology, & build practical tools that make operations more reliable.</p>
           <div className="hero-actions">
             <a className="button primary" href="#projects">See what I build</a>
@@ -144,6 +134,13 @@ export default function Home() {
       </section>
 
       <section className="stats-wrap"><div className="stats container">{stats.map((stat) => <div className="stat" key={stat.label}><strong>{stat.value}</strong><span>{stat.label}</span></div>)}</div></section>
+
+      <section className="section container" id="projects">
+        <div className="section-heading"><p className="eyebrow">Featured work</p><h2>Projects that prove how I approach IT.</h2><p>The strongest work in my portfolio comes from seeing an operational problem, understanding the system around it, and building something practical enough to use in the real world.</p></div>
+        <FeaturedProjects />
+        <div className="section-heading"><p className="eyebrow">More builds</p><h2>Additional software & workflow projects.</h2></div>
+        <div className="project-grid">{projects.map((project, index) => <article className="project-card" key={project.title}><div className="project-number">{String(index + 1).padStart(2, "0")}</div><p className="project-type">{project.type}</p><h3>{project.title}</h3><p>{project.description}</p><div className="tags">{project.tech.map((tech) => <span key={tech}>{tech}</span>)}</div></article>)}</div>
+      </section>
 
       <section className="section container" id="experience">
         <div className="section-heading"><p className="eyebrow">What I bring</p><h2>Hands-on IT operations backed by automation.</h2><p>Support, endpoint administration, asset lifecycle work, infrastructure troubleshooting, & software development all come together in the way I solve operational problems.</p></div>
@@ -168,23 +165,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section credentials-section" id="credentials">
-        <div className="container credentials-layout">
-          <div className="section-heading narrow">
-            <p className="eyebrow">Credentials</p>
-            <h2>IT support foundations, completed and applied.</h2>
-            <p>Completed the Google IT Support Professional Certificate in September 2026 and continue building hands-on automation and AI development skills.</p>
-          </div>
-          <div className="credential-list">
-            {credentials.map((credential, index) => <article className="credential-item" key={credential}><span>{String(index + 1).padStart(2, "0")}</span><h3>{credential}</h3></article>)}
-          </div>
-        </div>
-      </section>
-
-      <section className="section container" id="projects">
-        <div className="section-heading"><p className="eyebrow">Selected builds</p><h2>Software built around real operational problems.</h2><p>My development work is strongest when it connects directly to IT: monitoring systems, desktop support tools, workflow automation, and products that turn repeated manual steps into something faster and easier to use.</p></div>
-        <div className="project-grid">{projects.map((project, index) => <article className="project-card" key={project.title}><div className="project-number">{String(index + 1).padStart(2, "0")}</div><p className="project-type">{project.type}</p><h3>{project.title}</h3><p>{project.description}</p><div className="tags">{project.tech.map((tech) => <span key={tech}>{tech}</span>)}</div></article>)}</div>
-      </section>
+      <CredentialsShowcase />
 
       <section className="section skills-section" id="skills"><div className="container skills-layout"><div className="section-heading narrow"><p className="eyebrow">Toolkit</p><h2>Technical range built through real use.</h2><p>Comfortable moving between user support, endpoint administration, physical devices, network troubleshooting, operational workflows, & code.</p></div><div className="skill-list">{skillGroups.map(([title, ...skills]) => <div className="skill-row" key={title}><h3>{title}</h3><div>{skills.map((skill) => <span key={skill}>{skill}</span>)}</div></div>)}</div></div></section>
 
