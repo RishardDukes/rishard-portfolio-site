@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./portfolio-refresh.css";
 
 export const metadata: Metadata = {
   title: "Rishard Dukes | IT Operations, Automation & Technical Support",
