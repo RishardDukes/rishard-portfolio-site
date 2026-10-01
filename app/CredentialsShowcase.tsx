@@ -39,11 +39,9 @@ export default function CredentialsShowcase() {
                 <p className="credential-issuer">{credential.issuer}</p>
                 <h3>{credential.title}</h3>
                 <p>{credential.detail}</p>
-                <div className="credential-tags" aria-label={`${credential.title} focus areas`}>
-                  {credential.proof.map((item) => (
-                    <span key={item}>{item}</span>
-                  ))}
-                </div>
+                <p className="credential-focus">
+                  <strong>Focus:</strong> {credential.proof.join(" · ")}
+                </p>
                 <div className="credential-footer">
                   <span>{credential.date}</span>
                   <a href={credential.verify} target="_blank" rel="noreferrer">Verify credential ↗</a>
