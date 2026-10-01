@@ -9,8 +9,8 @@ const featuredProjects = [
       ["1", "goal: make common support work faster without hiding what changes a system"],
     ],
     tags: ["Electron", "React", "TypeScript", "SQLite", "Tailwind"],
-    href: "https://github.com/RishardDukes/Hercules-IT",
-    linkLabel: "View repository ↗",
+    href: null,
+    linkLabel: null,
   },
   {
     eyebrow: "Production monitoring · Built from an operational need",
